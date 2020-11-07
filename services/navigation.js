@@ -518,4 +518,29 @@ module.exports = {
       { model: masterModel },
     );
   },
+
+  //
+  // Raw
+  //
+
+  rawListNavigations: async () => {
+    const { masterModel, pluginName } = extractMeta(strapi.plugins);
+    return strapi
+      .query(masterModel.modelName, pluginName)
+      .find();
+  },
+
+  rawListNavigationItems:  async () => {
+    const { itemModel, pluginName } = extractMeta(strapi.plugins);
+    return strapi
+      .query(itemModel.modelName, pluginName)
+      .find();
+  },
+
+  rawListAudiences: async () =>  async () => {
+    const { audienceModel, pluginName } = extractMeta(strapi.plugins);
+    return strapi
+      .query(audienceModel.modelName, pluginName)
+      .find();
+  },
 };

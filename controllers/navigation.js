@@ -61,4 +61,14 @@ module.exports = {
     const { body = {} } = ctx.request;
     return await strapi.plugins.navigation.services.navigation.put(id, body);
   },
+
+  //
+  // Raw listing 
+  //
+
+  rawListNavigations: async () => strapi.plugins.navigation.services.navigation.rawListNavigations(),
+
+  rawListNavigationItems: async () => strapi.plugins.navigation.services.navigation.rawListNavigationItems(),
+
+  rawListAudiences: async () => strapi.plugins.navigation.services.navigation.rawListAudiences(),
 };

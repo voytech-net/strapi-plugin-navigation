@@ -47,6 +47,33 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/navigations",
+      "handler": "navigation.rawListNavigations",
+      "config": {
+        "policies": [],
+        "prefix": false
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/navigationItems",
+      "handler": "navigation.rawListNavigationItems",
+      "config": {
+        "policies": [],
+        "prefix": false
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/audiences",
+      "handler": "navigation.rawListAudiences",
+      "config": {
+        "policies": [],
+        "prefix": false
+      }
     }
   ]
 }
